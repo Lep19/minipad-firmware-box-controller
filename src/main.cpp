@@ -22,6 +22,10 @@ void setup()
 
     // Allows to boot into UF2 bootloader mode by pressing the reset button twice.
     rp2040.enableDoubleResetBootloader();
+
+    // Set digital pins to support pullup
+    for(int i = 0; i < DIGITAL_KEYS; i++)
+        pinMode(i, INPUT_PULLUP);
 }
 
 void loop()
