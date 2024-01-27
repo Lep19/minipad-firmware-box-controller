@@ -48,7 +48,7 @@ To flash this firmware on your minipad or other RP2040 board, please refer to ou
 Setting up this project is really simple. The repository is set up using PlatformIO, an IDE in form of an extension for Visual Studio Code.
 You can find a download link for Visual Studio Code [here](https://code.visualstudio.com/). In there, search and install the extension `PlatformIO`.
 
-After that is done, clone the repository with `git clone https://github.com/minipadkb/minipad-firmware` and open the cloned folder using Visual Studio Code. PlatformIO will perform an installation of all dependencies for this project (Arduino-Pico framework, various drivers, ...). This might take up some time, depending on your network connection.
+After that is done, clone the repository with `git clone https://github.com/Lep19/minipad-firmware-box-controller` and open the cloned folder using Visual Studio Code. PlatformIO will perform an installation of all dependencies for this project (Arduino-Pico framework, various drivers, ...). This might take up some time, depending on your network connection.
 
 If you are not familiar with the usage of PlatformIO, a Quick Start guide can be found [here](https://docs.platformio.org/en/stable/integration/ide/vscode.html).
 
