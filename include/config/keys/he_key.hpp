@@ -16,10 +16,10 @@ struct HEKey : Key
     HEKey(uint8_t index) : Key(KeyType::HallEffect, index, index >= 26 ? 'a' : (char)('z' - index)) {}
 
     // Bool whether rapid trigger is enabled or not.
-    bool rapidTrigger = false;
+    bool rapidTrigger = true;
 
     // Bool whether continuous rapid trigger is enabled or not.
-    bool continuousRapidTrigger = false;
+    bool continuousRapidTrigger = true;
 
     // The sensitivity of the rapid trigger algorithm when pressing up.
     uint16_t rapidTriggerUpSensitivity = TRAVEL_DISTANCE_IN_0_01MM / 10;
