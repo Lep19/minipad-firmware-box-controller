@@ -41,11 +41,8 @@ jobs:
       - name: Install PlatformIO Core
         run: pip install --upgrade platformio
 
-      - name: Build 2K Firmware
-        run: pio run --environment minipad-2k-prod --verbose
-
-      - name: Build 3K Firmware
-        run: pio run --environment minipad-3k-prod --verbose
+      - name: Build Firmware
+        run: pio run --environment minipad-box --verbose
 
       - name: Create Release
         uses: actions/create-release@v1
@@ -59,22 +56,12 @@ jobs:
           tag_name: ${{ steps.get_version.outputs.firmware_version }}
           body_path: CURRENT_CHANGELOG.md
 
-      - name: Upload 2K Firmware Artifact
+      - name: Upload Firmware Artifact
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./.pio/build/minipad-2k-prod/firmware.uf2
-          asset_name: minipad_firmware_2k_${{ steps.get_version.outputs.firmware_version }}.uf2
-          asset_content_type: application/octet-stream
-
-      - name: Upload 3K Firmware Artifact
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./.pio/build/minipad-3k-prod/firmware.uf2
-          asset_name: minipad_firmware_3k_${{ steps.get_version.outputs.firmware_version }}.uf2
+          asset_path: ./.pio/build/minipad-box/firmware.uf2
+          asset_name: minipad_firmware_box_${{ steps.get_version.outputs.firmware_version }}.uf2
           asset_content_type: application/octet-stream
