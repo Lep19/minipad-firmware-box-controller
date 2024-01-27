@@ -25,5 +25,5 @@ struct Key
     char keyChar;
 
     // Bools whether HID commands are sent on the key.
-    bool hidEnabled = false;
+    bool hidEnabled = true;
 };
