@@ -223,7 +223,7 @@ uint16_t KeypadHandler::readKey(const Key &key)
     if (key.type == KeyType::Digital)
     {
         // Read the digital key and return 0 or 1 depending on whether the signal is HIGH or LOW.
-        return digitalRead(DIGITAL_PIN(key.index));
+        return !digitalRead(DIGITAL_PIN(key.index));
     }
     // Perform an analog read if the key is a hall effect one.
     else if (key.type == KeyType::HallEffect)
