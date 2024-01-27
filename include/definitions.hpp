@@ -57,7 +57,7 @@
 // The delay for the debounce on digital keys. This is necessary because the contacts on digital buttons "bounce",
 // meaning instead of a steady HIGH signal you'll get a couple signal changes (e.g. HIGH LOW HIGH LOW HIGH)
 // This millisecond delay is the minimum time between button presses for the HID signal to send to the host device.
-#define DIGITAL_DEBOUNCE_DELAY 50
+#define DIGITAL_DEBOUNCE_DELAY 0
 
 // Macro for getting the hall effect sensor pin of the specified key index. The pin order is being swapped here,
 // meaning on a 3-key device the pins are 28, 27 and 26. This macro has to be adjusted, depending on how the PCB
